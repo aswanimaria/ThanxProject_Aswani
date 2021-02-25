@@ -38,15 +38,7 @@ lane :deployment do |version: version|
   git_flow_merge(version: version)
   slack_notification(platform: 'iOS', version: version)
 end
-
-"scripts": {
-  "ios:beta": "fastlane ios beta",
- # "android:beta": "fastlane android beta"
-}
-
-
 end
-
 
 
 #platform :android do
