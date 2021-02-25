@@ -1,0 +1,12 @@
+{
+  "name": "Aswani_Thanx",
+  "displayName": "Aswani_Thanx",
+  "expo": {
+    "name": "Aswani_Thanx",
+    "slug": "Aswani_Thanx",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
