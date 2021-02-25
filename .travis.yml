@@ -1,0 +1,19 @@
+os: osx
+- stage: Test and lint ✅
+  language: node_js
+  node_js: 8.5.0
+  install: yarn
+  script: npm run test:lint && npm run test:unit
+
+- stage: Deploy iOS 🍏
+  if: branch = master AND type = push
+  language: node_js
+  node_js: 8.5.0
+  os: osx
+  osx_image: xcode9.2
+  before_install: bundle install
+  before_script:
+    - ./internals/scripts/travis/gitconfig.sh
+  install: yarn
+  script: npm run deployment:ios
+
