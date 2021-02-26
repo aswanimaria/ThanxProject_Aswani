@@ -16,8 +16,16 @@ platform :ios do
 desc 'Build the iOS application.'
 private_lane :build do
 #  certificates
-  increment_build_number(xcodeproj: './ios/AswaniThanx.xcodeproj')
-  gym(scheme: 'name', project: './ios/AswaniThanx.xcodeproj')
+  increment_build_number(xcodeproj: '/Users/Abin/Aswani/ASWANI_TEST/Aswani_Thanx/ios/AswaniThanx.xcodeproj')
+
+#  gym(scheme: 'AswaniThanx', project: '/Users/Abin/Aswani/ASWANI_TEST/Aswani_Thanx/ios/AswaniThanx.xcodeproj', configuration: "Debug", skip_codesigning: true)
+build_app(
+  project: "/Users/Abin/Aswani/ASWANI_TEST/Aswani_Thanx/ios/AswaniThanx.xcodeproj",
+  configuration: "Debug",
+  scheme: "AswaniThanx",
+  skip_codesigning: true,
+  skip_archive: true)
+
 end
 
 desc 'Ship to Testflight.'
